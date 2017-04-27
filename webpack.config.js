@@ -12,7 +12,7 @@ module.exports = {
 		//public_: './entry.js'
 	},
 	output: { //打包出口;
-		//publicPath: "http://localhost:8080/", //配合devServer本地Server;
+		publicPath: "../", //配合devServer本地Server;
 		path: path.resolve(__dirname, './dist/'), //出口地址;
 		filename: 'js/[name].min.js' //出口文件名;
 	},
@@ -131,7 +131,7 @@ module.exports = {
 							//小于10000K的图片文件转base64到css里,当然css文件体积更大;
 							limit: 10000,
 							//设置最终img路径;
-							name: '/img/[name]-[hash].[ext]'
+							name: 'img/[name]-[hash].[ext]'
 						}
 					},
 					{
@@ -147,8 +147,8 @@ module.exports = {
 	plugins: [ //插件;
 		//模板插件
         new HtmlWebpackPlugin({
-            filename: 'index.html',                    //设置最后生成文件名称;
-            template: __dirname+'/src/icons.html'   //设置原文件;
+            filename: 'html/index.html',                    //设置最后生成文件名称;
+            template: __dirname+'/src/html/icons.html'   //设置原文件;
         }),
 		//独立打包css插件;
 		new ExtractTextPlugin({
