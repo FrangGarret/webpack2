@@ -131,7 +131,11 @@ module.exports = {
 							//小于10000K的图片文件转base64到css里,当然css文件体积更大;
 							limit: 10000,
 							//设置最终img路径;
+<<<<<<< HEAD
 							name: 'img/[name]-[hash].[ext]'
+=======
+							name: './img/[name]-[hash].[ext]'
+>>>>>>> 18efc4aa6c98b17944d2ffbde27c0b407569e19d
 						}
 					},
 					{
